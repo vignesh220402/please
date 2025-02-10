@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    position: static;
+
+}
+
+/* Add this to your existing CSS */
+
+.navbar {
+    border-radius: 10px;
+    background-color: #174cd4;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+.me-auto{
+    margin-left: 40px;
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff; /* White color for brand */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #007bff; /* Blue color on hover */
+}
+.link {
+    margin-left: 15px; /* Adjust spacing between links if needed */
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-color: rgb(29, 111, 204);
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Styling the link class */
+.link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff; /* White color for links */
+    margin-left: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    padding: 0.5rem 1rem; /* Added padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.link::before, .link::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #007bff; /* Blue color for underline */
+    transition: width 0.3s ease;
+}
+
+.link::before {
+    left: 50%;
+    bottom: 0;
+}
+
+.link::after {
+    right: 50%;
+    bottom: 0;
+}
+
+.link:hover::before, .link:hover::after {
+    width: 50%;
+}
+
+.link:hover {
+    color: #007bff; /* Blue color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+}
+.link {
+    margin-left: 15px; /* Adjust spacing between links if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    .link {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+}
